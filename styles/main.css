@@ -1,0 +1,112 @@
+/* Logos & Icons
+==============*/
+
+
+#site-id{
+    width: 500px;
+    margin: auto;
+}
+#site-name {
+   background: -webkit-linear-gradient(#25325F, #86d8e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-family: 'Droid Sans', 'Montserrat', sans-serif;
+    font-size:64px;
+    font-weight: 800;
+    color: #1081d8;
+    padding-bottom: 0px;
+}
+
+#site-slogan {
+    color: #7F8188;
+    margin: 0px 10px;
+    }
+    
+.fa, .thumbnail .glyphicon {
+    background: -webkit-gradient(linear, 0 100%, 0 0, from(#337ab7), to(#265a88));
+    background: -webkit-linear-gradient(#337ab7 0%, #265a88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:24px;
+    color: blue;
+}
+
+/*  Typography
+================================*/
+.navbar-text {
+    font-weight: bold;
+    margin-right: 0;
+}
+
+/* Layout
+==============*/
+.pull-down{
+    margin-bottom: 0;
+}
+/* Colors
+==============*/
+
+.navbar-default{
+    /*background: url('/images/me_city.jpg') no-repeat right -100px, linear-gradient(to bottom, #080A11 0px, #25325F 100%);*/
+    background: url('/images/sf_city.jpg') no-repeat right -100px, linear-gradient(to bottom, #080A11 0px, #25325F 100%);
+    background-blend-mode: overlay;
+}
+
+
+
+body{
+   background: #080A11;
+}
+
+
+.jumbotron{
+    background: #25325F;
+    border-radius: 4px;
+}
+#about{
+    background: url('/images/desert_view.jpg') no-repeat left, linear-gradient(to bottom, #080A11 0px, #25325F 100%);
+    min-height: 100%;
+    height:auto !important; /* cross-browser */
+    height: 100%; /* cross-browser */
+}
+
+#aboutCanvase{
+    background-color: #ffffff;
+    opacity: .5;
+    height: 100%;
+}
+
+h1{
+    color: #080A11;
+   background: -webkit-linear-gradient(#25325F, #86d8e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Droid Sans', 'Montserrat', sans-serif;
+}
+.caption h3{ display: inline;}
+.jumbotron .container-fluid{
+    background-color: #CACDCD;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset, 0px 1px 5px rgba(0, 0, 0, 0.075);
+}
+.navbar-default{
+    border-color: #000000;
+}
+
+#contactUs{
+    background-color: #CACDCD;
+}
+
+/* FormValidation
+=================*/
+ .has-waring > .ng-dirty{
+     
+ }
+ .has-feeback > .ng-invalid .ng-dirty{}
+
+
+
+.ng-valid .ng-dirty{
+     border-color: green;
+    
+}
+
