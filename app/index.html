@@ -1,16 +1,130 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>shiro</title>    
-    <link href="lib.css" rel="stylesheet">
-    <link href="app.css" rel="stylesheet">
-  </head>
-  <body ng-app="shiro">
-    <div class="container" ng-view=""></div>
-    <script src="lib.js"></script>
-    <script src="templates.js"></script>
-    <script src="app.js"></script>
-  </body>
+<html ng-app="manageMeApp">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CarlParrish.com | SourceCode Samuria & Street Geek</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Montserrat:400,700' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body>
+
+    <header class="container-fluid">
+        <nav class="navbar navbar-default">
+            <div id="site-id" class="pull-left">
+                <div id="site-name">CarlParrish.com</div>
+                <div id="site-slogan">SourceCode Samuria & Straight Up Street Geek</div>
+            </div>
+            <div class="navbar-text pull-right pull-down">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+                    <li><a href="#blogs"><span class="glyphicon glyphicon-th-list"></span> Blogs</a></li>
+                    <li><a href="#contactSection"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-bookmark"></span> Links</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="jumbotron" id="about">
+        <div id="aboutCanvas">
+            Hello welcome to my Blog!
+        </div>
+    </section>
+    <section class="jumbotron" id="blogs">
+        <section class="container-fluid">
+            <h1>Blogs</h1>
+            <div class="row">
+                <list-tags></list-tags>
+            </div>
+            <p>...</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </section>
+    </section>
+    <section id="contactSection">
+        <div id="contactUs" class="container-fluid">
+            <h1>Contact Me!</h1>
+            <p class="help-block">On Twitter @cparrish817</p>
+            <form name="contactForm" id="contactForm" class="form-horizontal" ng-controller="ContactFormController as contactForm" ng-submit="contactForm.$valid && contractForm.addContactEntry(contactEntry)" novalidate>
+                <div class="form-group">
+                    <label for="contactName" class="col-sm-2 control-label">
+                        Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="contactName" id="contactName" class="form-control input-lg" ng-model="contactForm.contactEntry.author" placeholder="Name" required />
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail" class="col-sm-2 control-label">Email:</label>
+                    <div class="col-sm-10 ">
+                        <input type="email" id="contactEmail" class="form-control input-lg has-warning has-feeback" name="contactEmail" ng-model="contactForm.contactEntry.address" placeholder="Email" required />
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="emailBody" class="col-sm-2 control-label">Message:</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" rows="4" name="emailBody" ng-mode="contactForm.contactEntry.body" placeholder="Message Body" required ></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default" value="Submit">Submit</button>
+                        </<div>
+                    </div>
+
+            </form>
+            </div>
+
+    </section>
+    <footer>
+        photo credit: <a href="http://www.flickr.com/photos/51186333@N00/2859434138">Joshua Tree_1240</a> via <a href="http://photopin.com">photopin</a> <a href="https://creativecommons.org/licenses/by/2.0/">(license)</a>
+    </footer>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/bower_components/lodash/lodash.min.js"></script>
+    <script type="text/javascript" src="/bower_components/restangular/dist/restangular.min.js"></script>
+    <script type="text/javascript" src="/scripts/manageMe.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script>
+        ! function($) { //ensure $ always references jQuery
+            $(function() { //when dom has finished loading
+                //make top text appear aligned to bottom: http://stackoverflow.com/questions/13841387/how-do-i-bottom-align-grid-elements-in-bootstrap-fluid-layout
+                function fixHeader() {
+                    //for each element that is classed as 'pull-down'
+                    //reset margin-top for all pull down items
+                    $('.pull-down').each(function() {
+                        $(this).css('margin-top', 0);
+                    });
+
+                    //set its margin-top to the difference between its own height and the height of its parent
+                    $('.pull-down').each(function() {
+                        if ($(window).innerWidth() >= 768) {
+                            $(this).css('margin-top', $(this).parent().height() - $(this).height());
+                        }
+                    });
+                }
+
+                $(window).resize(function() {
+                    fixHeader();
+                });
+
+                fixHeader();
+            });
+        }(window.jQuery);
+    </script>
+    </div>
+</body>
+
 </html>
