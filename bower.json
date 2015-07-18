@@ -1,12 +1,24 @@
 {
   "name": "shiro",
-  "main": "app.js",
   "version": "0.0.0",
   "authors": [
     "Carl Parrish <cparrish@carlparrish.com>"
   ],
+  "description": "Frontend to SamuraiCRM",
+  "main": "index.html",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "keywords": [
+    "angularjs",
+    "node",
+    "bootstrap",
+    "blog",
+    "random-bits"
+  ],
   "license": "GPL3",
-  "private": true,
+  "homepage": "http://www.carlparrish.com",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -14,8 +26,8 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "angular": "~1.2.14",
-    "angular-route": "~1.2.14"
+  "dependencies": {
+    "restangular": "~1.5.1",
+    "underscore": "~1.8.3"
   }
 }
