@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Books",
+        "summary": "Mostly Sci-fi / fantasy, Comics and an occational Business or Tech book but anything is fair game.",
+        "action": "Review",
+        "icon": "glyphicon glyphicon-book"
+    },
+    {
+        "title": "Hacking",
+        "summary": "Daily Discipline of a Profressional Programmer, PHP, Javascript, Ruby, Python, Java",
+        "action": "Samples",
+        "icon": "fa fa-code"
+    },
+    {
+        "title": "Movies",
+        "summary": "I'm not a movie critic,  I'm a movie __fan__ If you're  allergic to fan-boy skip this area",
+        "action": "Reviews",
+        "icon": "glyphicon glyphicon-film"
+    },
+    {
+        "title": "Binge",
+        "summary": "Episode Shows reviewed and reflected on very likely to be spoilers here so enter at your own risk",
+        "action": "Spoilers",
+        "icon": "glyphicon glyphicon-heart"
+    },
+    {
+        "title": "Random-bits",
+        "summary": "Most things I write about aren't easy to fit into a Catagory so they will go here",
+        "action": "Explore",
+        "icon": "glyphicon glyphicon-bullhorn"
+    },
+    {
+        "title": "Music",
+        "summary": "WhatIlistento",
+        "action": "Play",
+        "icon": "glyphicon glyphicon-headphones"
+    }
+]
