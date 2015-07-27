@@ -34,9 +34,59 @@
         </nav>
     </header>
     <section class="jumbotron" id="about">
-        <div id="aboutCanvas">
-            Hello welcome to my Blog!
+      <div id="aboutCanvas" class="container-fluid">
+         <h1>Profile</h1>
+        <div id="profile" class="row">
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <img src="images/me_water2.jpg" id="profilePicture" class="img-responsive img-circle" />
+                <div class="navbar-text pull-left">
+                    <div class="btn-group btn-group-md">
+                        <button class="btn btn-primary"><span class="fa fa-github"></span></button>
+                        <button class="btn btn-primary"><span class="fa fa-stack-overflow"></span></button>
+                        <button class="btn btn-primary"><span class="fa fa-twitter"></span></button>
+                        <button class="btn btn-primary"><span class="fa fa-instagram"></span></button>
+                        <button class="btn btn-primary"><span class="fa fa-codepen"></span></button>
+                        <button class="btn btn-primary"><span class="fa fa-linkedin-square"></span></button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed vel bibendum dolor. Cras mattis urna et dictum venenatis.
+                Etiam id enim vitae ex aliquet vulputate eu vel enim.
+                Vestibulum commodo rhoncus metus ac pellentesque.
+                Sed eleifend vestibulum turpis, ut rhoncus lacus finibus eget.
+                Nam in efficitur justo.
+                Mauris dignissim, justo sit amet dictum vestibulum, massa nibh
+                pellentesque ante, quis egestas libero magna id enim.
+                Mauris id malesuada ligula.
+                Praesent vulputate commodo diam ac tempor.</p>
+
+
+</div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <p>In ligula diam, commodo eu justo eget, pharetra congue
+                ligula. Etiam sagittis sapien in iaculis mattis.
+                Etiam luctus pellentesque massa quis congue.
+                Morbi gravida pellentesque arcu id iaculis.
+                Quisque convallis porta accumsan.
+                Integer enim enim, dignissim ac pharetra in, commodo posuere
+                nulla. Curabitur finibus tempor turpis, sit amet euismod enim
+                lobortis in. In finibus lacinia nunc, non vulputate dui
+                dignissim quis. Etiam euismod porttitor est, non tempus
+                tortor sollicitudin scelerisque. Nulla quam risus, molestie
+                at bibendum at, hendrerit non nisi. In hac habitasse platea
+                dictumst. Aenean vel lobortis augue, ac placerat elit.
+                Pellentesque pellentesque dapibus blandit. Nam imperdiet quam
+                sit amet orci lobortis, id suscipit ipsum commodo.
+                Maecenas semper blandit risus quis varius. Etiam non nisl
+                lobortis, condimentum turpis dapibus, auctor lectus.</p>
+
+</div>
         </div>
+     </div>
     </section>
     <section class="jumbotron" id="blogs">
         <section class="container-fluid">
@@ -87,19 +137,17 @@
     </section>
     <footer>
         Copyright &copy; 2015 CarlParrish.com <br />
-        photo credit:
-        <a href="http://www.flickr.com/photos/51186333@N00/2859434138">Joshua Tree_1240</a>
-         via <a href="http://photopin.com">photopin</a>
-          <a href="https://creativecommons.org/licenses/by/2.0/">(license)</a>
     </footer>
-    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
     <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.4.3/angular-route.min.js"></script>
     <script type="text/javascript" src="/bower_components/lodash/lodash.min.js"></script>
     <script type="text/javascript" src="/bower_components/restangular/dist/restangular.min.js"></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
     <script type="text/javascript" src="/scripts/manageMe.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
     <script>
         ! function($) { //ensure $ always references jQuery
